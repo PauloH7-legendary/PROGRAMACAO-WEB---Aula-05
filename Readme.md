@@ -45,3 +45,37 @@ Para criar/aplicar migrations:
 
 ```bash
 npx prisma migrate dev
+
+
+## Atividade 02 - CRUD com Prisma Puro na Tabela Courses ##
+
+## CRUD de Courses
+
+O projeto também implementa um CRUD completo para o modelo `Course`, utilizando o Prisma Client.
+
+As operações realizadas são:
+
+- Create: cadastro de um novo curso
+- Read: busca de um curso pelo ID
+- Read: busca de todos os cursos
+- Update: alteração de um curso existente
+- Delete: exclusão de um curso pelo ID
+
+### Estrutura do CRUD
+
+Os arquivos responsáveis pelas operações estão organizados na pasta:
+
+```text
+
+src/
+└── Courses/
+    ├── createCourse.js
+    ├── getCourseById.js
+    ├── getCourses.js
+    ├── updateCourse.js
+    ├── deleteCourse.js
+    └── runCrud.js
+
+```
+
+> Observação: o CRUD da Atividade 02 foi desenvolvido em JavaScript, conforme solicitado na atividade.     
