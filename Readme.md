@@ -79,3 +79,16 @@ src/
 ```
 
 > Observação: o CRUD da Atividade 02 foi desenvolvido em JavaScript, conforme solicitado na atividade.     
+
+
+## Atividade 03 - Relacionamento 1:N com Prisma
+
+Nesta atividade foi implementado um relacionamento um-para-muitos (1:N) entre os modelos `Author` e `Book`, utilizando o Prisma Client e PostgreSQL.
+
+### Relacionamento
+
+Um autor pode possuir vários livros, enquanto cada livro pertence a um único autor.
+
+```text
+
+Author 1 ───────── N Book
