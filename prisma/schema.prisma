@@ -17,6 +17,7 @@ model Course {
   name      String
   createdAt DateTime @default(now())
   modules   Module[]
+  courseModules CoursesModules[]
 }
 
 model Module {
@@ -25,6 +26,18 @@ model Module {
   courseId Int
 
   course Course @relation(fields: [courseId], references: [id])
+  courseModules CoursesModules[]
+}
+
+model CoursesModules {
+  courseId Int
+  moduleId Int
+
+  course Course @relation(fields: [courseId], references: [id])
+  module Module @relation(fields: [moduleId], references: [id])
+
+  @@id([courseId, moduleId])
+  @@map("CoursesModules")
 }
 
 model Author {
