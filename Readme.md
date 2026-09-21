@@ -81,7 +81,7 @@ src/
 > Observação: o CRUD da Atividade 02 foi desenvolvido em JavaScript, conforme solicitado na atividade.     
 
 
-## Atividade 03 - Relacionamento 1:N com Prisma
+## Atividade/Aula 04 - Relacionamento 1:N com Prisma
 
 Nesta atividade foi implementado um relacionamento um-para-muitos (1:N) entre os modelos `Author` e `Book`, utilizando o Prisma Client e PostgreSQL.
 
@@ -92,3 +92,26 @@ Um autor pode possuir vários livros, enquanto cada livro pertence a um único a
 ```text
 
 Author 1 ───────── N Book
+
+## Atividade/Aula 05 - Relacionamento N:N entre Course e Module
+
+Nesta atividade foi implementado um relacionamento muitos-para-muitos (N:N) entre os modelos `Course` e `Module`, utilizando a tabela intermediária `CoursesModules`.
+
+### Operações realizadas
+
+- Criação de registros em `Course` e `Module`
+- Criação da associação na tabela `CoursesModules`
+- Consulta dos registros relacionados utilizando `include`
+- Remoção da associação da tabela intermediária
+
+### Estrutura
+
+```text
+
+Course
+   │
+   └── CoursesModules
+           │
+           └── Module
+
+```           
